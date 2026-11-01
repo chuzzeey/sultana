@@ -86,11 +86,11 @@ export default function Home() {
             </section>
             <section className="connect">
               <h3><i className="fas fa-headset" /> Connect</h3>
-              <a href="tel:+62216500552"><span className="contact-icon"><i className="fas fa-phone" /></span> +62 21 - 6500 552</a>
-              <a href="https://wa.me/6285212667822" target="_blank" rel="noopener noreferrer"><span className="contact-icon"><i className="fab fa-whatsapp" /></span> +62 852 1266 7822</a>
+              <a href="tel:+62215600652"><span className="contact-icon"><i className="fas fa-phone" /></span> +62 21-5600 652</a>
+              <a href="https://wa.me/6287213665722" target="_blank" rel="noopener noreferrer"><span className="contact-icon"><i className="fab fa-whatsapp" /></span> +62 872 1366 5722</a>
               <a href="mailto:ptsultanalestari@gmail.com"><span className="contact-icon"><i className="fas fa-envelope" /></span> ptsultanalestari@gmail.com</a>
-              <a href="https://instagram.com/daawatindonesia" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram social-icon" /> @daawatindonesia</a>
-              <a href="https://instagram.com/antebella.id" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram social-icon" /> @antebella.id</a>
+              <span className="connect-social"><i className="fab fa-instagram social-icon" /> @daawatindonesia</span>
+              <span className="connect-social"><i className="fab fa-instagram social-icon" /> @antebella.id</span>
             </section>
           </div>
           <div className="footer-bottom">
