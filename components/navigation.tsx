@@ -1,26 +1,30 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeMenu = () => setMenuOpen(false);
+  const linkClass = (href: string) => `nav-link${pathname === href ? " active" : ""}`;
 
   return (
     <nav className="site-nav">
       <div className="nav-inner">
-        <a className="brand-lockup" href="https://sultana-agro.id/" aria-label="Sultana Agro Lestari home">
+        <Link className="brand-lockup" href="/" aria-label="Sultana Agro Lestari home">
           <img src="/assets/images/sal-logo.png" alt="Sultana Agro Lestari" />
           <span>PT. SULTANA AGRO LESTARI</span>
-        </a>
+        </Link>
 
         <div className="desktop-links">
-          <a className="nav-link active" href="https://sultana-agro.id/"><i className="fas fa-home" /> Home</a>
-          <a className="nav-link" href="https://sultana-agro.id/about.php"><i className="fas fa-building" /> About Us</a>
-          <a className="nav-link" href="https://sultana-agro.id/products.php"><i className="fas fa-box-open" /> Products</a>
-          <a className="nav-link" href="https://sultana-agro.id/updates.php"><i className="fas fa-newspaper" /> Updates</a>
-          <a className="nav-contact" href="https://sultana-agro.id/contact.php"><i className="fas fa-envelope" /> Contact</a>
+          <Link className={linkClass("/")} href="/"><i className="fas fa-home" /> Home</Link>
+          <Link className={linkClass("/about")} href="/about"><i className="fas fa-building" /> About Us</Link>
+          <Link className={linkClass("/products")} href="/products"><i className="fas fa-box-open" /> Products</Link>
+          <Link className={linkClass("/updates")} href="/updates"><i className="fas fa-newspaper" /> Updates</Link>
+          <Link className={`nav-contact${pathname === "/contact" ? " active" : ""}`} href="/contact"><i className="fas fa-envelope" /> Contact</Link>
         </div>
 
         <button
@@ -35,11 +39,11 @@ export default function Navigation() {
       </div>
       {menuOpen && (
         <div className="mobile-links">
-          <a href="https://sultana-agro.id/" onClick={closeMenu}><i className="fas fa-home" /> Home</a>
-          <a href="https://sultana-agro.id/about.php" onClick={closeMenu}><i className="fas fa-building" /> About Us</a>
-          <a href="https://sultana-agro.id/products.php" onClick={closeMenu}><i className="fas fa-box-open" /> Products</a>
-          <a href="https://sultana-agro.id/updates.php" onClick={closeMenu}><i className="fas fa-newspaper" /> Updates</a>
-          <a className="mobile-contact" href="https://sultana-agro.id/contact.php" onClick={closeMenu}>Contact Us</a>
+          <Link className={linkClass("/")} href="/" onClick={closeMenu}><i className="fas fa-home" /> Home</Link>
+          <Link className={linkClass("/about")} href="/about" onClick={closeMenu}><i className="fas fa-building" /> About Us</Link>
+          <Link className={linkClass("/products")} href="/products" onClick={closeMenu}><i className="fas fa-box-open" /> Products</Link>
+          <Link className={linkClass("/updates")} href="/updates" onClick={closeMenu}><i className="fas fa-newspaper" /> Updates</Link>
+          <Link className={`mobile-contact${pathname === "/contact" ? " active" : ""}`} href="/contact" onClick={closeMenu}>Contact Us</Link>
         </div>
       )}
     </nav>
