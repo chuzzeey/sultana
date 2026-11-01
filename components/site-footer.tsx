@@ -22,7 +22,7 @@ export default function SiteFooter() {
             <h3><i className="fas fa-headset" /> Connect</h3>
             <a href="tel:+62215600652"><span className="contact-icon"><i className="fas fa-phone" /></span> +62 21-5600 652</a>
             <a href="https://wa.me/6287213665722" target="_blank" rel="noopener noreferrer"><span className="contact-icon"><i className="fab fa-whatsapp" /></span> +62 872 1366 5722</a>
-            <a href="mailto:ptsultanalestari@gmail.com"><span className="contact-icon"><i className="fas fa-envelope" /></span> ptsultanalestari@gmail.com</a>
+            <a href="mailto:marketing@ptsultanaagrolestari.id"><span className="contact-icon"><i className="fas fa-envelope" /></span> marketing@ptsultanaagrolestari.id</a>
             <span className="connect-social"><i className="fab fa-instagram social-icon" /> @daawatindonesia</span>
             <span className="connect-social"><i className="fab fa-instagram social-icon" /> @antebella.id</span>
           </section>

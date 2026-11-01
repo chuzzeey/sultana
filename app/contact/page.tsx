@@ -30,10 +30,10 @@ export default function ContactPage() {
             <span className="contact-card-label">WhatsApp</span>
             <strong>+62 872 1366 5722</strong>
           </a>
-          <a className="contact-card" href="mailto:ptsultanalestari@gmail.com">
+          <a className="contact-card" href="mailto:marketing@ptsultanaagrolestari.id">
             <span className="contact-card-icon"><i className="fas fa-envelope" /></span>
             <span className="contact-card-label">Email</span>
-            <strong>ptsultanalestari@gmail.com</strong>
+            <strong>marketing@ptsultanaagrolestari.id</strong>
           </a>
         </div>
         <div className="contact-address">
